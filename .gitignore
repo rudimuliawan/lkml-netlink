@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Build Folder
+cmake-build-debug
+cmake-build-debug-vmware-ubuntu
+build
+.cache
+.idea
