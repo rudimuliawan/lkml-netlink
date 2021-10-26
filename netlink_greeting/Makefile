@@ -1,5 +1,3 @@
-CONFIG_MODULE_SIG=n
-
 obj-m += netlink_greeting.o
 
 all:

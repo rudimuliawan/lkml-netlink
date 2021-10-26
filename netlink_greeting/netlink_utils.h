@@ -2,8 +2,8 @@
 // Created by Rudi Muliawan on 23/10/21.
 //
 
-#ifndef LKML_NETLINK_NETLINK_UTILS_H
-#define LKML_NETLINK_NETLINK_UTILS_H
+#ifndef NETLINK_UTILS_H
+#define NETLINK_UTILS_H
 
 #include <linux/netlink.h>
 
@@ -11,7 +11,8 @@
 #define NLMSG_GREET 20
 #define NETLINK_TEST_PROTOCOL 31
 
-static inline char * netlink_get_msg_type(__u16 nlmsg_type){
+
+static inline char *netlink_get_msg_type(__u16 nlmsg_type){
     switch(nlmsg_type){
         case NLMSG_NOOP:
             return "NLMSG_NOOP";
@@ -27,6 +28,7 @@ static inline char * netlink_get_msg_type(__u16 nlmsg_type){
             return "NLMSG_UNKNOWN";
     }
 }
+
 
 static inline void nlmsg_dump(struct nlmsghdr *nlh){
     #ifdef __KERNEL__
@@ -68,4 +70,4 @@ static inline void nlmsg_dump(struct nlmsghdr *nlh){
     #endif
 }
 
-#endif // LKML_NETLINK_NETLINK_UTILS_H
+#endif // NETLINK_UTILS_H
